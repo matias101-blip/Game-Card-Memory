@@ -1,13 +1,30 @@
 
 # Table of Contents
 
-1.  [Inicio](#orgf3d7c67)
+1.  [Introduccion](#org2dbed50)
+2.  [Componentes](#orgef69d3c)
+    1.  [Inicio](#org395d251)
 
 
 
-<a id="orgf3d7c67"></a>
+<a id="org2dbed50"></a>
 
-# Inicio
+# Introduccion
+
+El siguiente proyecto es un juego de cartas de memoria
+utilizando react y chakra ui para el diseño, los componentes
+son los siguientes:
+
+
+<a id="orgef69d3c"></a>
+
+# Componentes
+
+
+
+<a id="org395d251"></a>
+
+## Inicio
 
 En este apartado hablaremos del codigo de la pagina del inicio,
 por el momento se usa Heading para el titulo.
