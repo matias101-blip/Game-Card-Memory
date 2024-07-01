@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import Tabla_Score from "./Componentes/tabla";
 import Player_One from "/Icon_one_player.png";
+import "./inicio.css"
 
 let Inicio = () => {
   return (
@@ -25,13 +26,12 @@ let Inicio = () => {
           </Heading>
         </Box>
         <Grid
-          templateRow="repeat(2, 1fr)"
-          templateColumns="repeat(3, 1fr)"
+          templateRows="repeat(auto-fill, minmax(13em,fr))"
+          templateColumns="repeat(auto-fill, minmax(13em ,1fr))"
           gap="3"
         >
           <GridItem
             colSpan="2"
-            h="13.5em"
             display="flex"
             gap={4}
             justifyContent="center"
@@ -55,7 +55,7 @@ let Inicio = () => {
               <Button>Iniciar Partida</Button>
             </Box>
           </GridItem>
-          <GridItem colSpan="2" h="13.5em" display="flex" gap={4} p={4}>
+          <GridItem colSpan="2" display="flex" gap={4} p={4}>
             <Box alignContent="center">
               <Avatar src={Player_One} size="lg" bg="blue.500" />
             </Box>
@@ -74,7 +74,7 @@ let Inicio = () => {
               <Button>Iniciar Duelo</Button>
             </Box>
           </GridItem>
-          <GridItem colStart="3" colEnd="" rowStart="-1" rowEnd="3">
+          <GridItem colStart="3" rowStart="-1" rowEnd="3" id="HighScore">
             <Box className="High_Score" p={2}>
               <Box
                 className="Cabezera_Score"
