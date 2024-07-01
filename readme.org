@@ -1,16 +1,50 @@
 #+title: Readme del Juego de cartas
+#+language: es
 #+author: Thehunter101
 
+#+name: Introduccion
+* Introduccion
+El siguiente proyecto es un juego de cartas de memoria
+utilizando react y chakra ui para el diseño, los componentes
+son los siguientes:
+* Componentes
 #+name: Inicio
-* Inicio
+** Inicio
 En este apartado hablaremos del codigo de la pagina del inicio,
 por el momento se usa Heading para el titulo.
 #+begin_src js-jsx :tangle ./src/Inicio/inicio.jsx
-import {Heading} from "@chakra-ui/react"
+import {Text, Center, Heading, Grid, Box, Container, GridItem, Button} from "@chakra-ui/react"
+import './inicio.css'
 let Inicio = () => {
   return (
-    <Heading>Hola</Heading>
+    <div id="Inicio">
+      <Center>
+        <Heading>Inicio</Heading>
+      </Center>
+      <Grid templateColumns='repeat(2,1fr)' gap={6}>
+        <GridItem ml={4}>
+          <Box display='flex' flexDir='column' justifyContent="center" alignItems='center' p={5} h='14em' border='1px' borderColor='white'>
+            <Heading>Un Jugador</Heading>
+            <Text flexGrow={1}>En este modo jugaras contra el tiempo, con un determinado tiempo debes revelar los pares lo mas rapido posible</Text>
+            <Button>Iniciar Juego</Button>
+          </Box>
+        </GridItem>
+        <GridItem mr={4}>
+          <Box display='flex' flexDir='column' justifyContent='center' alignItems='center' p={5} h='14em' border='1px' borderColor='white'>
+            <Heading>Dos jugadores</Heading>
+            <Text flexGrow={1}>En este modo jugaras con un compañero en la misma maquina, tendran puntos de vida los cuales se pierden al equivocarse, el que mas puntos de vida tenga gana</Text>
+            <Button>Iniciar Duelo</Button>
+          </Box>
+        </GridItem>
+        <GridItem colSpan={2}>
+          <Box display='flex' flexDir='column' justifyContent='center' alignItems='center'>
+            <Heading>Top de puntuaciones</Heading>
+          </Box>
+        </GridItem>
+      </Grid>
+    </div>
   )
 }
 export default Inicio;
 #+end_src
+**

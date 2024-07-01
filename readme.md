@@ -1,13 +1,13 @@
 
-# Table of Contents
+# &Iacute;ndice
 
-1.  [Introduccion](#org2dbed50)
-2.  [Componentes](#orgef69d3c)
-    1.  [Inicio](#org395d251)
+1.  [Introduccion](#org8fbf1fa)
+2.  [Componentes](#orge7a59d1)
+    1.  [Inicio](#orgd17420e)
 
 
 
-<a id="org2dbed50"></a>
+<a id="org8fbf1fa"></a>
 
 # Introduccion
 
@@ -16,13 +16,13 @@ utilizando react y chakra ui para el diseño, los componentes
 son los siguientes:
 
 
-<a id="orgef69d3c"></a>
+<a id="orge7a59d1"></a>
 
 # Componentes
 
 
 
-<a id="org395d251"></a>
+<a id="orgd17420e"></a>
 
 ## Inicio
 
@@ -32,7 +32,7 @@ por el momento se usa Heading para el titulo.
     import {Heading} from "@chakra-ui/react"
     let Inicio = () => {
       return (
-        <Heading>Hola</Heading>
+        <Heading>Inicio</Heading>
       )
     }
     export default Inicio;
