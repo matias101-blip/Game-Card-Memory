@@ -1,17 +1,16 @@
-import {
-  Text,
-  Heading,
-  Grid,
-  Box,
-  GridItem,
-  Button,
-  Avatar,
-} from "@chakra-ui/react";
+import { useState, useContext, createContext } from "react";
+import { Text, Heading, Grid, Box, GridItem, Avatar } from "@chakra-ui/react";
+import { Login, Login_2 } from "./Componentes/login";
 import Tabla_Score from "./Componentes/tabla";
 import Player_One from "/Icon_one_player.png";
-import "./inicio.css"
+import "./inicio.css";
+
+import { UsersContext } from "../main";
 
 let Inicio = () => {
+  const { Users, setUsers } = useContext(UsersContext);
+  const { setUser1, setUser2 } = setUsers;
+  const { user1, user2 } = Users;
   return (
     <div id="Inicio">
       <Box mr={150} ml={150} mt={10} p={15} borderRadius="20px">
@@ -21,7 +20,7 @@ let Inicio = () => {
           justifyContent="center"
           mb={6}
         >
-          <Heading as="h1" size="2xl" w="8em" textAlign="center">
+          <Heading as="h2" size="2xl" w="8em" textAlign="center">
             Juego de cartas de memoria
           </Heading>
         </Box>
@@ -52,7 +51,7 @@ let Inicio = () => {
                 En este modo debes descubrir los pares en el menor tiempo
                 posible
               </Text>
-              <Button>Iniciar Partida</Button>
+              <Login />
             </Box>
           </GridItem>
           <GridItem colSpan="2" display="flex" gap={4} p={4}>
@@ -71,7 +70,7 @@ let Inicio = () => {
                 En este modo puedes jugar con un amigo, tendra una barra de vida
                 y su turno sera de 5sg, el que menos vida tenga gana
               </Text>
-              <Button>Iniciar Duelo</Button>
+              <Login_2 />
             </Box>
           </GridItem>
           <GridItem colStart="3" rowStart="-1" rowEnd="3" id="HighScore">

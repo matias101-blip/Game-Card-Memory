@@ -12,39 +12,16 @@ son los siguientes:
 ** Inicio
 En este apartado hablaremos del codigo de la pagina del inicio,
 por el momento se usa Heading para el titulo.
-#+begin_src js-jsx :tangle ./src/Inicio/inicio.jsx
-import {Text, Center, Heading, Grid, Box, Container, GridItem, Button} from "@chakra-ui/react"
-import './inicio.css'
-let Inicio = () => {
-  return (
-    <div id="Inicio">
-      <Center>
-        <Heading>Inicio</Heading>
-      </Center>
-      <Grid templateColumns='repeat(2,1fr)' gap={6}>
-        <GridItem ml={4}>
-          <Box display='flex' flexDir='column' justifyContent="center" alignItems='center' p={5} h='14em' border='1px' borderColor='white'>
-            <Heading>Un Jugador</Heading>
-            <Text flexGrow={1}>En este modo jugaras contra el tiempo, con un determinado tiempo debes revelar los pares lo mas rapido posible</Text>
-            <Button>Iniciar Juego</Button>
-          </Box>
-        </GridItem>
-        <GridItem mr={4}>
-          <Box display='flex' flexDir='column' justifyContent='center' alignItems='center' p={5} h='14em' border='1px' borderColor='white'>
-            <Heading>Dos jugadores</Heading>
-            <Text flexGrow={1}>En este modo jugaras con un compañero en la misma maquina, tendran puntos de vida los cuales se pierden al equivocarse, el que mas puntos de vida tenga gana</Text>
-            <Button>Iniciar Duelo</Button>
-          </Box>
-        </GridItem>
-        <GridItem colSpan={2}>
-          <Box display='flex' flexDir='column' justifyContent='center' alignItems='center'>
-            <Heading>Top de puntuaciones</Heading>
-          </Box>
-        </GridItem>
-      </Grid>
-    </div>
-  )
-}
-export default Inicio;
-#+end_src
-**
+
+* Dame un resumen de react
+:PROPERTIES:
+:GPTEL_TOPIC: dame-un-resumen-de-react
+* Generame un resumen de react
+
+React es una librería JavaScript de código abierto para construir interfaces de usuario. Usa un DOM virtual y un flujo de datos unidireccional para crear aplicaciones rápidas y eficientes.
+
+** Como funciona useState en js
+
+=useState= en React se usa para manejar el estado dentro de componentes funcionales. Devuelve un array con dos elementos: el valor actual del estado y una función para actualizarlo.
+
+:END:
